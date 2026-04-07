@@ -5,3 +5,4 @@ tabulate
 openpyxl
 duckdb
 streamlit-ace
+sqlparse
