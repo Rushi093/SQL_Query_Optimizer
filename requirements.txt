@@ -1,8 +1,10 @@
-streamlit
-groq
-sqlparse
 streamlit-ace
 json
 re
-pandas
-duckdb
+streamlit==1.33.0
+pandas==2.2.2
+numpy==1.26.4
+sqlparse==0.4.4
+duckdb==0.10.2
+groq==0.5.0
+requests==2.31.0
