@@ -4,7 +4,8 @@ from groq import Groq
 import os
 
 # client = Groq(api_key="API_KEY_HERE")  # ⚠️ Replace with your API key
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+# client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+client = Groq(api_key=st.secrets["GROQ_API_KEY"])
 
 def optimize_sql(user_query):
     prompt = f"""
