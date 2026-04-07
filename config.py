@@ -13,4 +13,4 @@ def setup_page(title="SQL Optimizer"):
 # GROQ CLIENT
 # -------------------------------
 # client = Groq(api_key="API_KEY_HERE_2")  # replace with your actual API key
-client = Groq(api_key=os.getenv("GROQ_API_KEY_2"))
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
