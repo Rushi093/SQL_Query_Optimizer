@@ -4,7 +4,7 @@ from groq import Groq
 import os
 
 # client = Groq(api_key="API_KEY_HERE")  # ⚠️ Replace with your API key
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+client = Groq(api_key=os.getenv("GROQ_API_KEY_1"))
 
 def optimize_sql(user_query):
     prompt = f"""
@@ -51,7 +51,7 @@ SQL Query:
     content = completion.choices[0].message.content.strip()
 
     try:
-        st.write(json.loads(content))
+        # st.write(json.loads(content))
         return json.loads(content)
     except Exception:
         st.error("❌ Failed to parse response. Raw output below:")
