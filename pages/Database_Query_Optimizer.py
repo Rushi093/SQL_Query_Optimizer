@@ -184,7 +184,7 @@ if st.session_state.file_uploaded:
         with st.spinner("Optimizing query..."):
             try:
                 data = call_groq(build_prompt(query, st.session_state.columns))
-                st.write(data)  # retained: matches original debug output
+                # st.write(data)  # retained: matches original debug output
             except Exception as e:
                 st.error(f"Groq API Error: {e}")
                 st.stop()
