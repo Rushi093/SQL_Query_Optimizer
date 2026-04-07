@@ -6,4 +6,3 @@ json
 re
 pandas
 duckdb
-streamlit_ace
