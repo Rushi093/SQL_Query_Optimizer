@@ -3,7 +3,7 @@ from streamlit_ace import st_ace
 from optimizer import optimize_sql
 from ui import render_results
 
-st.set_page_config(page_title="SQL Query Optimizer", layout="wide")
+st.set_page_config(page_title="SQL Query Optimizer",page_icon="®️", layout="wide")
 
 # st.sidebar.title("⚡ SQL Query Optimizer")
 
