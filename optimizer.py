@@ -1,16 +1,12 @@
 import json
 import streamlit as st
 from groq import Groq
+import os
+
+# client = Groq(api_key="API_KEY_HERE")  # ⚠️ Replace with your API key
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 def optimize_sql(user_query):
-    # ✅ Check API key
-    if "GROQ_API_KEY" not in st.secrets:
-        st.error("❌ API Key not found in Streamlit Secrets")
-        st.stop()
-
-    # ✅ Create client INSIDE function
-    client = Groq(api_key=st.secrets["GROQ_API_KEY"])
-
     prompt = f"""
 You are an expert SQL optimizer.
 
@@ -55,6 +51,7 @@ SQL Query:
     content = completion.choices[0].message.content.strip()
 
     try:
+        st.write(json.loads(content))
         return json.loads(content)
     except Exception:
         st.error("❌ Failed to parse response. Raw output below:")
