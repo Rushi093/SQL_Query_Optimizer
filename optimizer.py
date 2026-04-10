@@ -14,6 +14,7 @@ Your task:
 Analyze the given SQL query and return ONLY a valid raw JSON object.
 Do NOT include markdown, backticks, explanations outside JSON, or extra text.
 if user send SELECT c.column1, c.column2, ... this is optimal query and return original query and set already_optimal to true
+Optimize Query ending place ; this symbol.
 
 STRICT RULES:
 1. Do NOT assume column names. If unknown, use: SELECT column1, column2, ...
